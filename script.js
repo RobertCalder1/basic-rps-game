@@ -4,9 +4,9 @@ var ties = 0;
 
 var options = ["ROCK", "PAPER", "SCISSORS"];
 
-var PlayGame = function() {
+function PlayGame() {
 
-    var playerChoice = window.prompt("Enter 'Rock', 'Paper' or 'Scissors':");
+    var playerChoice = prompt("Enter 'Rock', 'Paper' or 'Scissors':");
 
     if (!playerChoice) {
         return;
@@ -19,11 +19,11 @@ var PlayGame = function() {
 
     var BotChoice = options[Choice];
 
-    window.alert("The Bot chose " + BotChoice);
+    alert("The Bot chose " + BotChoice);
 
     if (playerChoice === BotChoice) {
     ties++
-    window.alert("It's a tie!!👔");
+    alert("It's a tie!!👔");
 
     }
 
@@ -33,19 +33,19 @@ var PlayGame = function() {
     (playerChoice === "PAPER" && BotChoice === "ROCK")
     ) {
     wins++
-    window.alert("You WIN!!!🎉")
+    alert("You WIN!!!🎉")
     }
 
     else {
     losses++
-    window.alert("You Lose!😞")
+    alert("You Lose!😞")
     }
 
-    window.alert(
+    alert(
     "Stats:\nwins: " + wins + "\nLosses: " + losses + "\nTies: " + ties
     );
 
-    var replay = window.confirm("Play Again?");
+    var replay = confirm("Play Again?");
 
     if (replay) {
     PlayGame();
